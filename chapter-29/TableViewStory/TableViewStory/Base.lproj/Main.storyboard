@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="qTS-3D-net">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Attraction Table View Controller-->
+        <scene sceneID="4xN-ii-Kog">
+            <objects>
+                <tableViewController id="qTS-3D-net" customClass="AttractionTableViewController" customModule="TableViewStory" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="MCg-p4-9i0">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="AttractionTableCell" id="EVT-pd-X2K" customClass="AttractionTableViewCell" customModule="TableViewStory" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="EVT-pd-X2K" id="502-hL-db8">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bQM-dh-7gr">
+                                            <rect key="frame" x="128" y="12" width="192" height="20.5"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="JBU-jj-TZf">
+                                            <rect key="frame" x="0.0" y="0.0" width="120" height="44"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="120" id="e1J-mC-CZ0"/>
+                                            </constraints>
+                                        </imageView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="bQM-dh-7gr" firstAttribute="leading" secondItem="JBU-jj-TZf" secondAttribute="trailing" constant="8" id="0j4-nN-06m"/>
+                                        <constraint firstAttribute="bottom" secondItem="JBU-jj-TZf" secondAttribute="bottom" id="HHW-hh-eB3"/>
+                                        <constraint firstAttribute="trailing" secondItem="bQM-dh-7gr" secondAttribute="trailing" id="NuX-em-02W"/>
+                                        <constraint firstAttribute="bottom" secondItem="bQM-dh-7gr" secondAttribute="bottom" constant="11" id="ZWa-4N-6NI"/>
+                                        <constraint firstItem="JBU-jj-TZf" firstAttribute="leading" secondItem="502-hL-db8" secondAttribute="leading" id="fHS-Gp-8zn"/>
+                                        <constraint firstItem="JBU-jj-TZf" firstAttribute="top" secondItem="502-hL-db8" secondAttribute="top" id="gNA-eh-AYN"/>
+                                        <constraint firstItem="bQM-dh-7gr" firstAttribute="top" secondItem="502-hL-db8" secondAttribute="top" constant="12" id="lBG-1v-C1r"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="attractionImage" destination="JBU-jj-TZf" id="zIN-kC-OG4"/>
+                                    <outlet property="attractionLabel" destination="bQM-dh-7gr" id="dAu-kH-wkG"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="qTS-3D-net" id="Xlw-TR-bJx"/>
+                            <outlet property="delegate" destination="qTS-3D-net" id="v1P-a8-sBr"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="AWf-Qk-FoB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-338" y="-276"/>
+        </scene>
+    </scenes>
+</document>
